@@ -32,7 +32,7 @@ ARGV.each do |file_path|
   count = content.scan(DASH_PATTERN).length
 
   if count > 0
-    normalized = content.gsub(DASH_PATTERN, '-')
+    normalized = content.gsub(DASH_PATTERN, ' - ')
     File.write(file_path, normalized)
     puts "Replaced #{count} dash(es) in #{file_path}"
     total_count += count
